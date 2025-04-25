@@ -1,0 +1,88 @@
+:root {
+  --slick-border: hsl(0, 0%, 23%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 80%);
+  margin: 0;
+  font-family: poppins;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.page-switcher {
+  background-color: hsl(0, 0%, 10%);
+  border-inline-end: 1px solid hsl(0, 0%, 20%);
+  display: grid;
+  grid-auto-rows: max-content;
+  min-width: 200px;
+  padding: 1rem;
+}
+
+.all-page-container {
+  flex-grow: 1;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.each-page {
+  /* border: 1px solid red; */
+  height: 100vh;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.each-page-wrapper {
+  height: 100%;
+  border: 1px solid var(--slick-border);
+  overflow-y: auto;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+
+.each-page-wrapper span {
+  font-size: 3rem;
+  border-block-end: 1px solid;
+}
+p {
+  font-size: 1.5rem;
+}
+
+[name="page-radio-group"] {
+  display: none;
+}
+
+[name="page-radio-group"]:checked + span {
+  background-color: hsl(0, 0%, 15%);
+
+  &:hover {
+    background-color: hsl(0, 0%, 18%);
+  }
+}
+
+label {
+  display: block;
+}
+
+label span {
+  display: block;
+  margin-block: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--slick-border);
+  cursor: pointer;
+
+  &:hover {
+    background-color: hsl(0, 0%, 18%);
+  }
+}
